@@ -2,8 +2,7 @@
 
 int fbz(int n);
 int fbo(int n);
-int setz[41] = {0,};
-int seto[41] = {0,};
+int set[41] = {0,};
 
 int main(void) {
   int N;
@@ -22,10 +21,10 @@ int fbz(int n) {
     case(0): n = 1; break;
     case(1): n = 0; break;
     default: 
-      if(setz[n] != 0) n = setz[n];
+      if(set[n] != 0) n = set[n];
       else {
-        setz[n] = fbz(n - 1) + fbz(n - 2);
-        n = setz[n];
+        set[n] = fbz(n - 1) + fbz(n - 2);
+        n = set[n];
       }
   }
   return n;
@@ -36,10 +35,10 @@ int fbo(int n) {
     case(0): n = 0; break;
     case(1): n = 1; break;
     default: 
-      if(seto[n] != 0) n = seto[n];
+      if(set[n+1] != 0) n = set[n+1];
       else {
-      seto[n] = fbo(n - 1) + fbo(n - 2);
-      n = seto[n];
+      set[n+1] = fbo(n - 1) + fbo(n - 2);
+      n = set[n+1];
       }
   }
   return n;
