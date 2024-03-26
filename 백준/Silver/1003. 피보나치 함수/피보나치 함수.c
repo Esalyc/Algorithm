@@ -21,11 +21,6 @@ int fbz(int n) {
   switch(n) {
     case(0): n = 1; break;
     case(1): n = 0; break;
-    case(2): n = 1; break;
-    case(3): n = 1; break;
-    case(4): n = 2; break;
-    case(5): n = 3; break;
-    case(6): n = 5; break;
     default: 
       if(setz[n] != 0) n = setz[n];
       else {
@@ -40,11 +35,6 @@ int fbo(int n) {
   switch(n) {
     case(0): n = 0; break;
     case(1): n = 1; break;
-    case(2): n = 1; break;
-    case(3): n = 2; break;
-    case(4): n = 3; break;
-    case(5): n = 5; break;
-    case(6): n = 8; break;
     default: 
       if(seto[n] != 0) n = seto[n];
       else {
